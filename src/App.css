@@ -7,7 +7,10 @@
   pointer-events: none;
 }
 .navbar-container {
-  background-color: #002b5b;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(1.4px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
 }
 .page {
   background-color: #002b5b;
@@ -18,6 +21,13 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+#home {
+  background-image: url("./assets/hero_bg.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
 }
 
 #about {

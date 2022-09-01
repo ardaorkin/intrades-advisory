@@ -8,7 +8,8 @@ function NavBarContainer() {
       <Navbar
         collapseOnSelect
         expand="lg"
-        sticky="top"
+        fixed="top"
+        bg="transparent"
         variant="dark"
         className="navbar-container"
       >
@@ -21,7 +22,6 @@ function NavBarContainer() {
               alignItems: "center",
               justifyContent: "start",
             }}
-            className="col-md-4"
           >
             <img
               src={logo}
@@ -33,8 +33,11 @@ function NavBarContainer() {
             Intrades Advisory
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto .col-md-4 .ml-auto justify-content-center">
+          <Navbar.Collapse
+            id="responsive-navbar-nav"
+            className="justify-content-end"
+          >
+            <Nav>
               <Nav.Link href="#about">About Us</Nav.Link>
               <Nav.Link href="#industries">Industries</Nav.Link>
               <Nav.Link href="#pricing">Pricing</Nav.Link>
