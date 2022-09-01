@@ -37,7 +37,10 @@
 }
 
 #about {
-  background-color: #2b4865;
+  background-image: url("./assets/about_us.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
 }
 
 #industries {

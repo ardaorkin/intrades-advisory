@@ -38,6 +38,7 @@ function NavBarContainer() {
             className="justify-content-end"
           >
             <Nav>
+              <Nav.Link href="#home">Home</Nav.Link>
               <Nav.Link href="#about">About Us</Nav.Link>
               <Nav.Link href="#products">Products</Nav.Link>
               <Nav.Link href="#pricing">Pricing</Nav.Link>
