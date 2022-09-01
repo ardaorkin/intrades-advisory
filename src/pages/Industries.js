@@ -46,7 +46,12 @@ const Industries = () => {
   return (
     <div id="industries" className="page">
       Industries
-      <Row xs={1} md={3} className="g-5" style={{ marginTop: 10 }}>
+      <Row
+        xs={1}
+        md={3}
+        className="g-5"
+        style={{ marginTop: 10, marginBottom: "5%" }}
+      >
         {industries.map((industry) => (
           <Col
             style={{
