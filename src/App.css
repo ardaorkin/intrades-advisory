@@ -6,12 +6,18 @@
   height: 40vmin;
   pointer-events: none;
 }
+
 .navbar-container {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(1.4px);
   border: 1px solid rgba(255, 255, 255, 0.14);
 }
+
+.navbar-nav {
+  --bs-nav-link-color: rgba(255, 255, 255, 0.8) !important;
+}
+
 .page {
   background-color: #002b5b;
   min-height: 100vh;
