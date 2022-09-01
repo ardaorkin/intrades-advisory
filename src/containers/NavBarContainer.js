@@ -39,7 +39,7 @@ function NavBarContainer() {
           >
             <Nav>
               <Nav.Link href="#about">About Us</Nav.Link>
-              <Nav.Link href="#industries">Industries</Nav.Link>
+              <Nav.Link href="#products">Products</Nav.Link>
               <Nav.Link href="#pricing">Pricing</Nav.Link>
               <Nav.Link href="#contact">Contact Us</Nav.Link>
             </Nav>

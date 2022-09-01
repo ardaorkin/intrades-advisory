@@ -1,6 +1,6 @@
 import Card from "react-bootstrap/Card";
 
-function IndustryCard(props = { text: "", title: "", image: "" }) {
+function ProductCard(props = { text: "", title: "", image: "" }) {
   return (
     <Card
       style={{
@@ -21,4 +21,4 @@ function IndustryCard(props = { text: "", title: "", image: "" }) {
   );
 }
 
-export default IndustryCard;
+export default ProductCard;

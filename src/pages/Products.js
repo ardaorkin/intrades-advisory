@@ -1,16 +1,16 @@
 import React from "react";
-import IndustryCard from "../components/IndustryCard";
+import ProductCard from "../components/ProductCard";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-const industries = [
+const products = [
   {
     title: "Textile Products",
     text: "",
     image: "",
   },
   {
-    title: "Food Industry",
+    title: "Food Product",
     text: "",
   },
   {
@@ -26,7 +26,7 @@ const industries = [
     text: "",
   },
   {
-    title: "Medical Industry",
+    title: "Medical Product",
     text: "",
   },
   {
@@ -42,17 +42,17 @@ const industries = [
     text: "",
   },
 ];
-const Industries = () => {
+const Products = () => {
   return (
-    <div id="industries" className="page">
-      Industries
+    <div id="products" className="page">
+      Products
       <Row
         xs={1}
         md={3}
         className="g-5"
         style={{ marginTop: 10, marginBottom: "5%" }}
       >
-        {industries.map((industry) => (
+        {products.map((product) => (
           <Col
             style={{
               display: "flex",
@@ -60,7 +60,7 @@ const Industries = () => {
               justifyContent: "center",
             }}
           >
-            <IndustryCard {...industry} />
+            <ProductCard {...product} />
           </Col>
         ))}
       </Row>
@@ -68,4 +68,4 @@ const Industries = () => {
   );
 };
 
-export default Industries;
+export default Products;

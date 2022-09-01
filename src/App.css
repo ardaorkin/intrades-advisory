@@ -47,3 +47,38 @@
 #pricing {
   background-color: #8fe3cf;
 }
+
+.btn:focus {
+  outline: none !important;
+}
+
+.hero-btn {
+  background-color: transparent !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(1.4px);
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  border-radius: 0px !important;
+}
+
+#about-btn {
+  background-color: white !important;
+  color: black;
+}
+
+#about-btn:hover {
+  color: white;
+  border: 3px solid white !important;
+  background-color: transparent !important;
+}
+#products-btn {
+  color: white;
+  border: 3px solid white !important;
+  margin-left: 2%;
+}
+
+#products-btn:hover {
+  color: black;
+  background-color: white !important;
+  margin-left: 2%;
+}

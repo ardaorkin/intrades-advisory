@@ -31,3 +31,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+h1 {
+  font-size: 250% !important;
+  text-shadow: 5px 3px 4px rgba(0, 0, 0, 0.6);
+}
+
+p {
+  font-size: 75% !important;
+  text-shadow: 5px 3px 4px rgba(0, 0, 0, 0.6);
+}

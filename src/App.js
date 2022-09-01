@@ -2,7 +2,7 @@ import "./App.css";
 import MainPage from "./pages/MainPage";
 import NavBarContainer from "./containers/NavBarContainer";
 import AboutUs from "./pages/AboutUs";
-import Industries from "./pages/Industries";
+import Products from "./pages/Products";
 import Pricing from "./pages/Pricing";
 import ContactUs from "./pages/ContactUs";
 
@@ -12,7 +12,7 @@ function App() {
       <NavBarContainer />
       <MainPage />
       <AboutUs />
-      <Industries />
+      <Products />
       <Pricing />
       <ContactUs />
     </div>
