@@ -30,7 +30,7 @@
 }
 
 #home {
-  background-image: url("./assets/hero_bg.jpg");
+  background-image: url("./assets/hero_bg_sm.jpg");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
