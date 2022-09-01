@@ -1,4 +1,5 @@
 import "./App.css";
+import "./animations.css";
 import MainPage from "./pages/MainPage";
 import NavBarContainer from "./containers/NavBarContainer";
 import AboutUs from "./pages/AboutUs";

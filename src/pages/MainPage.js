@@ -10,12 +10,12 @@ const MainPage = () => {
       <Container style={{ textAlign: "start" }}>
         <Row>
           <Col>
-            <h1>We Help You</h1>
-            <h1>To Grow Your Business</h1>
+            <h1 className="text-focus-in">We Help You</h1>
+            <h1 className="text-focus-in">To Grow Your Business</h1>
           </Col>
         </Row>
         <Row style={{ width: "55%" }}>
-          <p>
+          <p className="text-focus-in">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
             posuere iaculis ultrices. Nullam posuere imperdiet nunc, vel
             pharetra magna commodo vel.
@@ -23,14 +23,19 @@ const MainPage = () => {
         </Row>
         <Row>
           <Col style={{ display: "flex", flexDirection: "row" }}>
-            <Button href="#about" size="lg" id="about-btn" className="hero-btn">
+            <Button
+              href="#about"
+              size="lg"
+              id="about-btn"
+              className="hero-btn text-focus-in"
+            >
               About Us
             </Button>
             <Button
               href="#products"
               size="lg"
               id="products-btn"
-              className="hero-btn"
+              className="hero-btn text-focus-in"
             >
               Products
             </Button>
