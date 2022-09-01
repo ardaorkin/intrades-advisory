@@ -85,3 +85,7 @@
   background-color: white !important;
   margin-left: 2%;
 }
+
+.hero-btn:focus {
+  box-shadow: none !important;
+}
