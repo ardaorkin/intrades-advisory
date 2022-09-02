@@ -21,34 +21,33 @@ const products = [
     title: "Construction & Building",
     text: "",
   },
-  {
-    title: "Furniture",
-    text: "",
-  },
-  {
-    title: "Medical Product",
-    text: "",
-  },
-  {
-    title: "Plastic & Rubber",
-    text: "",
-  },
-  {
-    title: "Cosmetics",
-    text: "",
-  },
-  {
-    title: "Kitchenware",
-    text: "",
-  },
+  // {
+  //   title: "Furniture",
+  //   text: "",
+  // },
+  // {
+  //   title: "Medical Product",
+  //   text: "",
+  // },
+  // {
+  //   title: "Plastic & Rubber",
+  //   text: "",
+  // },
+  // {
+  //   title: "Cosmetics",
+  //   text: "",
+  // },
+  // {
+  //   title: "Kitchenware",
+  //   text: "",
+  // },
 ];
 const Products = () => {
   return (
     <div id="products" className="page">
-      Products
       <Row
-        xs={1}
-        md={3}
+        xs={2}
+        md={4}
         className="g-5"
         style={{ marginTop: 10, marginBottom: "5%" }}
       >

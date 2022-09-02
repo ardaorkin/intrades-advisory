@@ -1,19 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 
-const AboutUs = () => {
+const AboutUs = ({ componentWillAnimate }) => {
   return (
     <div id="about" className="page">
       <Container style={{ textAlign: "center" }}>
         <Row>
           <Col>
-            <h1 className="tracking-in-expand">About Us</h1>
+            <h1
+              className={
+                componentWillAnimate === "#about" ? "tracking-in-expand" : ""
+              }
+            >
+              About Us
+            </h1>
           </Col>
         </Row>
         <Row>
-          <p className="text-focus-in">
+          <p
+            className={componentWillAnimate === "#about" ? "text-focus-in" : ""}
+          >
             Duis tincidunt leo sit amet lorem tempor, ac mollis nulla malesuada.
             Vestibulum varius molestie auctor. Morbi efficitur sapien et
             fringilla mattis. Donec eget nunc sed erat mattis tempus. Fusce a

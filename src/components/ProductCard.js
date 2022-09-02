@@ -4,8 +4,8 @@ function ProductCard(props = { text: "", title: "", image: "" }) {
   return (
     <Card
       style={{
-        width: "18rem",
-        minHeight: "10rem",
+        width: "20rem",
+        minHeight: "36rem",
         backgroundColor: "transparent",
         border: "1px solid rgba(22, 225, 208, 0.33)",
         boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",

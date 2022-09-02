@@ -4,18 +4,32 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 
-const MainPage = () => {
+const MainPage = ({ componentWillAnimate, startAnimation }) => {
   return (
     <div id="home" className="page">
       <Container style={{ textAlign: "start" }}>
         <Row>
           <Col>
-            <h1 className="text-focus-in">We Help You</h1>
-            <h1 className="text-focus-in">To Grow Your Business</h1>
+            <h1
+              className={
+                componentWillAnimate === "#home" ? "text-focus-in" : ""
+              }
+            >
+              We Help You
+            </h1>
+            <h1
+              className={
+                componentWillAnimate === "#home" ? "text-focus-in" : ""
+              }
+            >
+              To Grow Your Business
+            </h1>
           </Col>
         </Row>
         <Row style={{ width: "55%" }}>
-          <p className="text-focus-in">
+          <p
+            className={componentWillAnimate === "#home" ? "text-focus-in" : ""}
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
             posuere iaculis ultrices. Nullam posuere imperdiet nunc, vel
             pharetra magna commodo vel.
@@ -27,7 +41,12 @@ const MainPage = () => {
               href="#about"
               size="lg"
               id="about-btn"
-              className="hero-btn text-focus-in"
+              onClick={startAnimation}
+              className={
+                componentWillAnimate === "#home"
+                  ? "hero-btn text-focus-in"
+                  : "hero-btn"
+              }
             >
               About Us
             </Button>
@@ -35,7 +54,12 @@ const MainPage = () => {
               href="#products"
               size="lg"
               id="products-btn"
-              className="hero-btn text-focus-in"
+              onClick={startAnimation}
+              className={
+                componentWillAnimate === "#home"
+                  ? "hero-btn text-focus-in"
+                  : "hero-btn"
+              }
             >
               Products
             </Button>

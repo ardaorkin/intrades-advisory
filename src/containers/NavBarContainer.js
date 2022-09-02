@@ -2,7 +2,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import logo from "../assets/logo.svg";
-function NavBarContainer() {
+function NavBarContainer({ startAnimation, ...props }) {
   return (
     <>
       <Navbar
@@ -39,10 +39,18 @@ function NavBarContainer() {
           >
             <Nav>
               <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#about">About Us</Nav.Link>
-              <Nav.Link href="#products">Products</Nav.Link>
-              <Nav.Link href="#pricing">Pricing</Nav.Link>
-              <Nav.Link href="#contact">Contact Us</Nav.Link>
+              <Nav.Link href="#about" onClick={startAnimation}>
+                About Us
+              </Nav.Link>
+              <Nav.Link href="#products" onClick={startAnimation}>
+                Products
+              </Nav.Link>
+              <Nav.Link href="#pricing" onClick={startAnimation}>
+                Pricing
+              </Nav.Link>
+              <Nav.Link href="#contact" onClick={startAnimation}>
+                Contact Us
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
