@@ -3,8 +3,11 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
+import { useAtom } from "jotai";
+import { languageChoiceWithPersistence } from "../store";
 
 const MainPage = ({ componentWillAnimate, startAnimation }) => {
+  const [language] = useAtom(languageChoiceWithPersistence);
   return (
     <div id="home" className="page">
       <Container style={{ textAlign: "start" }}>
@@ -15,14 +18,14 @@ const MainPage = ({ componentWillAnimate, startAnimation }) => {
                 componentWillAnimate === "#home" ? "text-focus-in" : ""
               }
             >
-              We Help You
+              {language === "en" ? "We Help You" : "İşinizi Büyütmek"}
             </h1>
             <h1
               className={
                 componentWillAnimate === "#home" ? "text-focus-in" : ""
               }
             >
-              To Grow Your Business
+              {language === "en" ? "To Grow Your Business" : "İster Misiniz?"}
             </h1>
           </Col>
         </Row>
@@ -39,7 +42,7 @@ const MainPage = ({ componentWillAnimate, startAnimation }) => {
                   : "hero-btn"
               }
             >
-              About Us
+              {language === "en" ? "About Us" : "Hakkımızda"}
             </Button>
           </Col>
         </Row>

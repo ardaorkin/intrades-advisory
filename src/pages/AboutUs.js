@@ -3,7 +3,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import { useAtom } from "jotai";
-import { contentAtom, languageChoice } from "../store";
+import { contentAtom, languageChoiceWithPersistence } from "../store";
 
 const Content = ({ header, description }) => {
   return (
@@ -16,10 +16,12 @@ const Content = ({ header, description }) => {
 
 const AboutUs = ({ componentWillAnimate }) => {
   const [content] = useAtom(contentAtom);
-  const [selectedLanguage] = useAtom(languageChoice);
+  const [selectedLanguage] = useAtom(languageChoiceWithPersistence);
   return (
     <div id="about" className="page">
-      <Container style={{ textAlign: "center", padding: "3rem" }}>
+      <Container
+        style={{ textAlign: "center", padding: "3rem", paddingTop: "8rem" }}
+      >
         <Row>
           <Col>
             <h1
@@ -27,7 +29,7 @@ const AboutUs = ({ componentWillAnimate }) => {
                 componentWillAnimate === "#about" ? "tracking-in-expand" : ""
               }
             >
-              About Us
+              {selectedLanguage === "en" ? "About Us" : "Hakkımızda"}
             </h1>
           </Col>
         </Row>

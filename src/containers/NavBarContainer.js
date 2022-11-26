@@ -1,8 +1,20 @@
+import { Button } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import logo from "../assets/logo.svg";
+import { useAtom } from "jotai";
+import { languageChoiceWithPersistence } from "../store";
+
 function NavBarContainer({ startAnimation, ...props }) {
+  const [language, setLanguage] = useAtom(languageChoiceWithPersistence);
+  const handleLanguage = () => {
+    if (language === "tr") {
+      setLanguage("en");
+    } else {
+      setLanguage("tr");
+    }
+  };
   return (
     <>
       <Navbar
@@ -30,7 +42,7 @@ function NavBarContainer({ startAnimation, ...props }) {
               className="d-inline-block align-top"
               alt="Intrades Advisory logo"
             />
-            Intrades Advisory
+            {language === "en" ? "Intrades Advisory" : "Intrades Danışmanlık"}
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse
@@ -38,13 +50,22 @@ function NavBarContainer({ startAnimation, ...props }) {
             className="justify-content-end"
           >
             <Nav>
-              <Nav.Link href="#home">Home</Nav.Link>
+              <Nav.Link href="#home">
+                {language === "en" ? "Home" : "Ana Sayfa"}
+              </Nav.Link>
               <Nav.Link href="#about" onClick={startAnimation}>
-                About Us
+                {language === "en" ? "About Us" : "Hakkımızda"}
               </Nav.Link>
               <Nav.Link href="#contact" onClick={startAnimation}>
-                Contact Us
+                {language === "en" ? "Contant Us" : "İletişim"}{" "}
               </Nav.Link>
+              <Button
+                variant="light"
+                style={{ backgroundColor: "transparent", border: "none" }}
+                onClick={handleLanguage}
+              >
+                {language === "tr" ? "🇹🇷" : "🇬🇧"}
+              </Button>
             </Nav>
           </Navbar.Collapse>
         </Container>
