@@ -50,19 +50,6 @@ const MainPage = ({ componentWillAnimate, startAnimation }) => {
             >
               About Us
             </Button>
-            <Button
-              href="#products"
-              size="lg"
-              id="products-btn"
-              onClick={startAnimation}
-              className={
-                componentWillAnimate === "#home"
-                  ? "hero-btn text-focus-in"
-                  : "hero-btn"
-              }
-            >
-              Products
-            </Button>
           </Col>
         </Row>
       </Container>

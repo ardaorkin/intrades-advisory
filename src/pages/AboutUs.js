@@ -2,11 +2,24 @@ import React, { useState } from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
+import { useAtom } from "jotai";
+import { contentAtom, languageChoice } from "../store";
+
+const Content = ({ header, description }) => {
+  return (
+    <div style={{ textAlign: "start" }}>
+      <h3>{header}</h3>
+      <p>{description}</p>
+    </div>
+  );
+};
 
 const AboutUs = ({ componentWillAnimate }) => {
+  const [content] = useAtom(contentAtom);
+  const [selectedLanguage] = useAtom(languageChoice);
   return (
     <div id="about" className="page">
-      <Container style={{ textAlign: "center" }}>
+      <Container style={{ textAlign: "center", padding: "3rem" }}>
         <Row>
           <Col>
             <h1
@@ -19,23 +32,16 @@ const AboutUs = ({ componentWillAnimate }) => {
           </Col>
         </Row>
         <Row>
-          <p
-            className={componentWillAnimate === "#about" ? "text-focus-in" : ""}
-          >
-            Duis tincidunt leo sit amet lorem tempor, ac mollis nulla malesuada.
-            Vestibulum varius molestie auctor. Morbi efficitur sapien et
-            fringilla mattis. Donec eget nunc sed erat mattis tempus. Fusce a
-            tincidunt diam. Nulla eros nibh, pulvinar molestie placerat quis,
-            cursus quis nibh. Cras aliquet dui urna, ac faucibus augue tincidunt
-            id. Quisque dolor risus, vehicula et tellus non, ornare viverra
-            eros. Mauris ac sollicitudin mauris. Maecenas dictum vehicula
-            consequat. Aliquam nunc ipsum, aliquam et tellus faucibus, hendrerit
-            dignissim nisl. Pellentesque ultrices mi lorem, quis molestie orci
-            accumsan eget. Donec nibh sem, euismod ut justo fringilla, luctus
-            tempus nunc.
-          </p>
+          {content[selectedLanguage] &&
+            Object.keys(content[selectedLanguage]).map((itemHeader, idx) => (
+              <Content
+                key={idx}
+                header={itemHeader.toUpperCase()}
+                description={content[selectedLanguage][itemHeader]}
+              />
+            ))}
         </Row>
-      </Container>{" "}
+      </Container>
     </div>
   );
 };
