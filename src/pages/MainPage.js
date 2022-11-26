@@ -26,15 +26,6 @@ const MainPage = ({ componentWillAnimate, startAnimation }) => {
             </h1>
           </Col>
         </Row>
-        <Row style={{ width: "55%" }}>
-          <p
-            className={componentWillAnimate === "#home" ? "text-focus-in" : ""}
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-            posuere iaculis ultrices. Nullam posuere imperdiet nunc, vel
-            pharetra magna commodo vel.
-          </p>
-        </Row>
         <Row>
           <Col style={{ display: "flex", flexDirection: "row" }}>
             <Button
