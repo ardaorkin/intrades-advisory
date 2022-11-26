@@ -42,12 +42,6 @@ function NavBarContainer({ startAnimation, ...props }) {
               <Nav.Link href="#about" onClick={startAnimation}>
                 About Us
               </Nav.Link>
-              <Nav.Link href="#products" onClick={startAnimation}>
-                Products
-              </Nav.Link>
-              <Nav.Link href="#pricing" onClick={startAnimation}>
-                Pricing
-              </Nav.Link>
               <Nav.Link href="#contact" onClick={startAnimation}>
                 Contact Us
               </Nav.Link>
