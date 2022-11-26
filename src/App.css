@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  background-image: url("./assets/about_us.jpg") !important;
+  background-position: center !important; /* Center the image */
+  background-repeat: no-repeat !important; /* Do not repeat the image */
+  background-size: cover !important; /* Resize the background image to cover the entire container */
 }
 
 .App-logo {
@@ -19,7 +23,6 @@
 }
 
 .page {
-  background-color: #002b5b;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -27,28 +30,6 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-#home {
-  background-image: url("./assets/hero_bg_sm.jpg");
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-}
-
-#about {
-  background-image: url("./assets/about_us.jpg");
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-}
-
-#products {
-  background-color: #256d85;
-}
-
-#pricing {
-  background-color: #8fe3cf;
 }
 
 .btn:focus {
