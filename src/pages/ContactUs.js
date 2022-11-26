@@ -16,7 +16,7 @@ const ContactUs = () => {
             <h1>{language === "en" ? "Contact Us" : "İletişim"}</h1>
           </Col>
         </Row>
-        <Row>
+        <Row style={{ marginTop: "3rem" }}>
           <Col>
             <div
               className="contact-links"
