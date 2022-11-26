@@ -2,6 +2,8 @@ import React from "react";
 import { useAtom } from "jotai";
 import { languageChoiceWithPersistence } from "../store";
 import { Col, Container, Row } from "react-bootstrap";
+import envelope from "bootstrap-icons/icons/envelope.svg";
+import telephone from "bootstrap-icons/icons/telephone.svg";
 const ContactUs = () => {
   const [language] = useAtom(languageChoiceWithPersistence);
   return (
@@ -14,14 +16,27 @@ const ContactUs = () => {
             <h1>{language === "en" ? "Contact Us" : "İletişim"}</h1>
           </Col>
         </Row>
-        <Row>
-          <a href="mailto:sercanyildiz@intradesadvisory.com" target={"_blank"}>
-            Mail Us
-          </a>
-          Or
-          <a href="tel:+905368877782" target={"_blank"}>
-            Call Us
-          </a>
+        <Row style={{ marginTop: "3rem" }}>
+          <Col>
+            <div
+              className="contact-links"
+              onClick={() =>
+                window.open("mailto:sercanyildiz@intradesadvisory.com")
+              }
+            >
+              <img src={envelope} width={100} height={100} />
+              <p>{language === "en" ? "Mail Us" : "Email"}</p>
+            </div>
+          </Col>
+          <Col>
+            <div
+              className="contact-links"
+              onClick={() => window.open("tel:+905368877782")}
+            >
+              <img src={telephone} width={100} height={100} />
+              <p>{language === "en" ? "Call Us" : "Bizi Arayın"}</p>
+            </div>
+          </Col>
         </Row>
       </Container>
     </div>
