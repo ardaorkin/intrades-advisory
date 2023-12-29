@@ -42,7 +42,23 @@ function NavBarContainer({ startAnimation, ...props }) {
               className="d-inline-block align-top"
               alt="Intrades Advisory logo"
             />
-            {language === "en" ? "Intrades Advisory" : "Intrades Danışmanlık"}
+            <div
+              style={{
+                display: "block",
+                textAlign: "start",
+              }}
+            >
+              <h5>
+                {language === "en"
+                  ? "Intrades Advisory"
+                  : "Intrades Danışmanlık"}
+              </h5>
+              <p>
+                {language === "en"
+                  ? "Intrades Foreign Trade Consulting and Marketing Limited Company."
+                  : "Intrades Dış Ticaret Danışmanlık ve Pazarlama Limited Şirketi"}
+              </p>
+            </div>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse
